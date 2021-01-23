@@ -1,0 +1,121 @@
+*, *::before, *::after {padding: 0; margin: 0; box-sizing: border-box;}
+body{font-family: sans-serif;}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: coral;
+}
+.box{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+.box article {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    text-align: center;
+}
+article h3{
+    color: cornsilk;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+article p {
+    color: cornsilk;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+.box span:nth-child(1){
+    border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -webkit-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -moz-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -ms-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -o-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    animation: positave 4s infinite linear;
+    -webkit-animation: positave 4s infinite linear;
+}
+.box:hover span{
+    background-color: #111;
+    border: none;
+}
+.box span:nth-child(2){
+    border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -webkit-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -moz-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -ms-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    -o-border-radius: 58% 42% 57% 43% / 33% 44% 56% 67% ;
+    animation: positave 6s infinite linear;
+    -webkit-animation: positave 6s infinite linear;
+}
+.box span:nth-child(3){
+    border-radius: 36% 64% 39% 61% / 56% 30% 70% 44% ;
+    -webkit-border-radius: 36% 64% 39% 61% / 56% 30% 70% 44% ;
+    -moz-border-radius: 36% 64% 39% 61% / 56% 30% 70% 44% ;
+    -ms-border-radius: 36% 64% 39% 61% / 56% 30% 70% 44% ;
+    -o-border-radius: 36% 64% 39% 61% / 56% 30% 70% 44% ;
+    animation: negatave 10s infinite linear;
+    -webkit-animation: negatave 10s infinite linear;
+}
+
+@keyframes positave {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+@keyframes negatave {
+    0%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+}
